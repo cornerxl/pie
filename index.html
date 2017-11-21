@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>饼状图</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+
+	<body>
+		<svg id="my_svg" width="1000px" height="1500px">
+			<!--
+            	作者：1520046283@qq.com
+            	时间：2016-10-17
+            	描述：
+            	<path d="M80, 80 A45, 45, 0, 0, 0, 125, 125 L125, 80 Z" fill="green"/>
+				<path d="M125, 125 A45, 45, 0, 0, 0, 170, 80 L125, 80 Z" fill="red"/>
+				<path d="M170, 80 A45, 45, 0, 0, 0, 125, 35 L125, 80 Z" fill="blue"/>
+				<path d="M125, 35 A45, 45, 0, 0, 0, 80, 80 L125, 80 Z" fill="yellow"/>
+				
+         -->
+		</svg>
+	</body>
+	<script>
+		var option = {
+			"color": ["#C23531", "#2F4554", "#61A0A8", "#D48265", "#91C7AE"],
+			"font": "Microsoft YaHei",
+			"title": {
+				"mainTitle": {
+					"text": "第一次绘制饼图",
+					"x": "350",
+					"y": "100",
+					"fontSize": "48",
+					"fontWeight": "900"
+				},
+				"subTitle": {
+					"text": "实验室",
+					"fontSize": "30",
+					"fontColor": "rgb(96,96,96)",
+					"fontWeight": "900"
+				}
+			},
+			"tips": {
+				"rect": {
+					"x": "145",
+					"y": "210",
+					"rx": "10",
+					"ry": "10",
+					"width": "75",
+					"height": "36"
+				},
+				"tipsText": {
+					"x": "240",
+					"y": "240",
+					"fontSize": "34",
+				}
+			},
+			"series": {
+				"radius": '200',
+				"strokeLine": "#fff",
+				"strokeWidthLine": "2",
+				"center": ['500', '800'],
+				"fontSize": "34",
+				"data": [{
+					"value": 115,
+					"name": '一年级'
+				}, {
+					"value": 215,
+					"name": '二年级'
+				}, {
+					"value": 215,
+					"name": '三年级'
+				}, {
+					"value": 215,
+					"name": '四年级'
+				}, {
+					"value": 215,
+					"name": '五年级'
+				}]
+			}
+		}
+		new Pie(option);
+	</script>
+
+</html>
